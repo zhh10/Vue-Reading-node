@@ -1,5 +1,5 @@
 # Vue-Reading-node
-Vue读书管理后台后端node
+Vue电子书管理后台——node后端
 
 ### API
 #### 1. /user/login
@@ -29,3 +29,35 @@ Vue读书管理后台后端node
 - method:POST 
 
 新增电子书
+
+### Nginx服务器搭建
+1. 添加当前登录用户为owner
+```
+user smlz owner;
+```
+2. 在结尾打括号之前添加：
+```
+include /Users/smlz/upload/upload.conf;
+```
+3. 添加`/Users/smlz/upload/upload.conf`
+```
+server
+{ 
+  charset utf-8;
+  listen 8089;
+  server_name myhost;
+  root /Users/sam/upload/;
+  autoindex on;
+  add_header Cache-Control "no-cache, must-revalidate";
+  location / { 
+    add_header Access-Control-Allow-Origin *;
+  }
+}
+```
+4. 下载`switchHosts`，进行设置
+```
+# SwitchHosts!
+
+# My hosts
+127.0.0.1	myhost
+```
