@@ -54,7 +54,7 @@ server
   }
 }
 ```
-4. 下载`switchHosts`，进行设置
+4. 下载`switchHosts!`，进行设置
 ```
 # SwitchHosts!
 
