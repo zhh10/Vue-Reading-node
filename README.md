@@ -30,6 +30,11 @@ Vue电子书管理后台——node后端
 
 新增电子书
 
+#### 6. /book/update 
+- method:POST 
+
+更新电子书
+
 ### Nginx服务器搭建
 1. 添加当前登录用户为owner
 ```
