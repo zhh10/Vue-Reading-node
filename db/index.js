@@ -42,7 +42,12 @@ function queryOne(sql){
     })
 }
 
+function insert(){
+
+}
+
 module.exports = {
     querySql,
-    queryOne
+    queryOne,
+    insert
 }
